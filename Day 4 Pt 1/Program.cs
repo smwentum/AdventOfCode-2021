@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace Day_4_Pt_1 // Note: actual namespace depends on the project name.
 {
     public class Program
     {
@@ -35,7 +35,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
             //Console.WriteLine(gamma);
             //Console.WriteLine(epsilon);
-            int answer = Convert.ToInt32(gamma,2)*Convert.ToInt32(epsilon,2);
+            int answer = Convert.ToInt32(gamma, 2) * Convert.ToInt32(epsilon, 2);
             Console.WriteLine(answer);
         }
     }

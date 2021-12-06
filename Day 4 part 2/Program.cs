@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace Day_4_part_2 // Note: actual namespace depends on the project name.
 {
     public class Program
     {
@@ -54,7 +54,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                         {
                             bingoBoards.RemoveAt(j);
                             j--;
-                            
+
                         }
                     }
                 }

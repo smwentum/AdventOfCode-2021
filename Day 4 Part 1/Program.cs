@@ -1,9 +1,8 @@
-﻿using Day_4_Part_1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace Day_4_Part_1 // Note: actual namespace depends on the project name.
 {
     public class Program
     {
@@ -17,10 +16,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             List<string> bingoBoard = new List<string>();
             List<Bingo[,]> bingoBoards = new List<Bingo[,]>();
             //create all the boards
-            for(int i = 1; i < lines.Length;i++)
+            for (int i = 1; i < lines.Length; i++)
             {
                 if (!string.IsNullOrWhiteSpace(lines[i]))
-                { 
+                {
                     bingoBoard.Add(lines[i]);
                 }
                 if (bingoBoard.Count == 5)
@@ -35,17 +34,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int product = -1;
             int sumOfunmarkedNumbers = 0;
             for (int i = 0; i < calls.Count; i++)
-            { 
+            {
                 int call = calls[i];
                 for (int j = 0; j < bingoBoards.Count; j++)
                 {
-                     markCall(bingoBoards[j], call);
+                    markCall(bingoBoards[j], call);
                     product = isWinningBOard(bingoBoards[j]);
-                    
-                    if ( product >= 0)
+
+                    if (product >= 0)
                     {
                         sumOfunmarkedNumbers = getSumOfUnmarkedNumbers(bingoBoards[j]);
-                        Console.WriteLine(sumOfunmarkedNumbers*call);
+                        Console.WriteLine(sumOfunmarkedNumbers * call);
                         return;
                     }
                 }
@@ -79,13 +78,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
                         break;
                     }
                     else
-                    { 
-                        answer+= bingos[i, j].square;
+                    {
+                        answer += bingos[i, j].square;
                     }
                 }
                 if (answer >= 0)
                 {
-                    return answer; 
+                    return answer;
                 }
             }
 
@@ -132,12 +131,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             Bingo[,] bingoBoard = new Bingo[5, 5];
             string line;
-            for (int i = 0; i <5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 line = listOfLines[i];
                 for (int j = 0; j < 5; j++)
                 {
-                    bingoBoard[i, j] = new Bingo( int.Parse(line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries )[j]));
+                    bingoBoard[i, j] = new Bingo(int.Parse(line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)[j]));
                 }
             }
             return bingoBoard;

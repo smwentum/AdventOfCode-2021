@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace Day_3_Part_2 // Note: actual namespace depends on the project name.
 {
     public class Program
     {
@@ -31,18 +31,18 @@ namespace MyApp // Note: actual namespace depends on the project name.
             for (int i = 0; i < validOxygenRating.Length; i++)
             {
                 if (validOxygenRating[i])
-                { 
+                {
                     oxygenRating = lines[i];
-                    
+
                 }
                 if (validCO2Rating[i])
-                { 
-                    co2Rating= lines[i];
+                {
+                    co2Rating = lines[i];
                 }
             }
             //Console.WriteLine(oxygenRating);
             //Console.WriteLine(co2Rating);
-            Console.WriteLine(Convert.ToInt32(oxygenRating,2) *Convert.ToInt32(co2Rating,2));
+            Console.WriteLine(Convert.ToInt32(oxygenRating, 2) * Convert.ToInt32(co2Rating, 2));
         }
 
         private static void removeAnyLinesWithNotMostCommonBitInPosition(string[] lines, bool[] validOxygenRating, int pos)
@@ -55,7 +55,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     count++;
                 }
             }
-            int totalCount = (int) Math.Ceiling(validOxygenRating.Count(m => m)/2.0) ;
+            int totalCount = (int)Math.Ceiling(validOxygenRating.Count(m => m) / 2.0);
             if (count >= totalCount)
             {
                 //remove everything with a zero 
@@ -67,7 +67,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     }
                 }
             }
-            else 
+            else
             {
                 //remove everything with a 1
                 for (int i = 0; i < lines.Length; i++)

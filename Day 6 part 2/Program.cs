@@ -26,7 +26,7 @@ namespace Day_6_part_2 // Note: actual namespace depends on the project name.
                 }
             }
             int numberOfdays = 256;
-            memo = new long[9, numberOfdays+2];
+            memo = new long[9, numberOfdays+1];
             long answer = 0;
             foreach (KeyValuePair<int, int> keyValuePair in countOfStartingFish)
             {

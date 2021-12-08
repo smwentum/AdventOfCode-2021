@@ -10,7 +10,7 @@ namespace Day_7_Part_2
         {
             long minFuleCost = long.MaxValue;
 
-            string line = File.ReadAllLines(@"D:\Documents\random programming stuff\Advent of code\2021\AdventOfCode\Day 7 Part 2\test.txt")[0];
+            string line = File.ReadAllLines(@"D:\Documents\random programming stuff\Advent of code\2021\AdventOfCode\Day 7 Part 2\real.txt")[0];
 
             int[] crabPositions = line.Split(',').Select(int.Parse).ToArray();
 

@@ -35,7 +35,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "day 8 part 1", "day 8 part 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day 8 part 2", "Day 8 part 2\Day 8 part 2.csproj", "{891CB0A4-BFF1-4540-B9A2-76B873D8E74D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 9 Part 1", "Day 9 Part 1\Day 9 Part 1.csproj", "{DCA3C41E-C0B5-412B-9D75-17238188FB19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day 9 Part 1", "Day 9 Part 1\Day 9 Part 1.csproj", "{DCA3C41E-C0B5-412B-9D75-17238188FB19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{847CA3EA-F0F7-4BCF-85BB-1F01A831C88D}"
+	ProjectSection(SolutionItems) = preProject
+		test1.txt = test1.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

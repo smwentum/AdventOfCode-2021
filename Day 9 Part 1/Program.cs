@@ -27,7 +27,7 @@ namespace Day_9_Part_1
             int answer = 0;
             int temp = 0;
 
-            //first the points in the center of map
+            // the points in the center of map
             for (int i = 1; i < heatMap.Length - 1; i++)
             {
                 for (int j = 1; j < heatMap[0].Length - 1; j++)
@@ -39,7 +39,7 @@ namespace Day_9_Part_1
                         )
                     {
                         temp = int.Parse(heatMap[i][j].ToString());
-                        Console.WriteLine(temp);
+                        //Console.WriteLine(temp);
                         answer += temp + 1;
                     }
                 }
@@ -54,7 +54,7 @@ namespace Day_9_Part_1
                     )
                 {
                     temp = int.Parse(heatMap[0][j].ToString());
-                    Console.WriteLine(temp);
+                    //Console.WriteLine(temp);
                     answer += temp + 1;
                 }
             }
@@ -68,7 +68,7 @@ namespace Day_9_Part_1
                     )
                 {
                     temp = int.Parse(heatMap[heatMap.Length - 1][j].ToString());
-                    Console.WriteLine(temp);
+                    //Console.WriteLine(temp);
                     answer += temp + 1;
                 }
             }
@@ -76,7 +76,7 @@ namespace Day_9_Part_1
 
             // left
              for (int i = 1; i < heatMap.Length - 1; i++)
-            {
+             {
 
                 if (int.Parse(heatMap[i - 1][0].ToString()) > int.Parse(heatMap[i][0].ToString())
                     && int.Parse(heatMap[i + 1][0].ToString()) > int.Parse(heatMap[i][0].ToString())
@@ -84,11 +84,11 @@ namespace Day_9_Part_1
                     )
                 {
                     temp = int.Parse(heatMap[i][0].ToString());
-                    Console.WriteLine(temp);
+                    //Console.WriteLine(temp);
                     answer += temp + 1;
                 }
 
-            }
+             }
 
 
             // right
@@ -100,8 +100,8 @@ namespace Day_9_Part_1
                     && int.Parse(heatMap[i][heatMap[0].Length - 2].ToString()) > int.Parse(heatMap[i][heatMap[0].Length - 1].ToString())
                     )
                 {
-                    temp = int.Parse(heatMap[i][0].ToString());
-                    Console.WriteLine(temp);
+                    temp = int.Parse(heatMap[i][heatMap[0].Length - 1].ToString());
+                    //Console.WriteLine(temp);
                     answer += temp + 1;
                 }
 
@@ -116,7 +116,7 @@ namespace Day_9_Part_1
                        )
             {
                 temp = int.Parse(heatMap[0][0].ToString());
-                Console.WriteLine(temp);
+                //Console.WriteLine(temp);
                 answer += temp + 1;
             }
 
@@ -127,7 +127,7 @@ namespace Day_9_Part_1
                        )
             {
                 temp = int.Parse(heatMap[heatMap.Length-1][0].ToString());
-                Console.WriteLine(temp);
+                //Console.WriteLine(temp);
                 answer += temp + 1;
             }
 
@@ -139,18 +139,18 @@ namespace Day_9_Part_1
                        )
             {
                 temp = int.Parse(heatMap[0][heatMap[0].Length - 1].ToString());
-                Console.WriteLine(temp);
+                //Console.WriteLine(temp);
                 answer += temp + 1;
             }
 
-            //top right 
-            if (int.Parse(heatMap[heatMap.Length - 1][heatMap[0].Length - 2].ToString()) > int.Parse(heatMap[heatMap.Length - 1][heatMap[heatMap.Length - 1].Length - 1].ToString())
+            //bottom right 
+            if (int.Parse(heatMap[heatMap.Length - 1][heatMap[0].Length - 2].ToString()) > int.Parse(heatMap[heatMap.Length - 1][heatMap[0].Length - 1].ToString())
                        && int.Parse(heatMap[heatMap.Length - 2][heatMap[0].Length - 1].ToString()) > int.Parse(heatMap[heatMap.Length - 1][heatMap[0].Length - 1].ToString())
 
                        )
             {
                 temp = int.Parse(heatMap[heatMap.Length - 1][heatMap[0].Length - 1].ToString());
-                Console.WriteLine(temp);
+                //Console.WriteLine(temp);
                 answer += temp + 1;
             }
 
